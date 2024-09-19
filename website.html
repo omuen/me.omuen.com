@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+        <title>Welcome</title>
+    <script>
+        function displayHello(){
+            var msg;
+            msg = document .getElementById("message")
+            msg.outerHTML = "<h1>Hello World!</h1>"
+        }
+        function areyoumuen() {
+            var reply; // user's reply
+            reply = confirm("Are you Muen?")
+            alert("when asked whether you are muen" +
+            "or not, your reply was: " + reply + ". :)")
+        } // end areyoumuen
+    </script>
+    <style>
+        #abc{
+                color: rgb(14, 126, 255)
+            }
+        #fav{
+                color: rgb(50, 197, 255)
+            }
+        .fontTNR {
+                color:rgb(10,128,128);
+                cursor: default;
+                padding: 20px;
+                font-size: 20px;
+                border: 1px solid black;
+                font-family: 'Times New Roman', Times, serif;
+                background-color:rgb(190, 247, 255);
+        }
+    </style>
+    </head>
+    <body onload="areyoumuen();">
+        <br>
+        <h1 id="fav">Welcome</h1>
+        <p>website made by muen</p>
+        <br>
+        <h3 id="message">
+            Please click the button below
+        </h3>
+        <input type="button" value="Click me!" onclick="displayHello();">
+        <br>
+        <p>
+            Haha FAKE BUTTON!
+        </p>
+        <p class="fontTNR">
+            Want to try a workable button?
+            Visit <a href="https://me.bimwook.com/muen.html">My Old Website</a>!  :D
+        </p>
+        <a href="https://me.bimwook.com/muen.html">My Old Website</a>
+        <br>
+        <br>
+        <p>hint: there's sth. at the bottom of the picture</p>
+        <br>
+        <img src="img/cattt.png">
+        <p id="abc">Hello World!</p>
+        <button type="button" onclick="showme()">Click Me!</button>
+        <script type="text/javascript">
+            var busy=false;
+            function showme(){
+                if(busy){
+                    return;
+                }
+                busy=true;
+                var abc = document.querySelector("#abc");
+                var oldtext = abc.innerText;
+                abc.innerText = "unfinished website";
+                setTimeout(function(){
+                    abc.innerText = oldtext;
+                    busy=false;
+                },3000);
+            }
+            
+            let o = [999, 897, 789, 666, 609, 544, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
+             for (let m = 0; m < o.length; m++) {
+                 let i = 0;
+                 while (i < o.length - m) {
+                     if (o[i] > o[i + 1]) {
+                         let p = o[i];
+                         o[i] = o[i + 1];
+                         o[i + 1] = p;
+                     }
+                     i++;
+                 }
+                 console.log(o);
+             }
+           //window.location.href="./island/index.html";
+         </script>
+    </body>
+</html>
